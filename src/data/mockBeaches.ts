@@ -7,6 +7,300 @@ import bayImg from '../assets/images/kitesurf_coastal_bay_1792134900498.jpg';
 
 export const INITIAL_BEACHES: Beach[] = [
   {
+    id: 'east-coast-park-beach',
+    name: 'East Coast Park (ECP) Beach & Coastal Lagoon',
+    region: 'East Coast (Area E & F)',
+    stateCountry: 'Singapore (OneMap & NEA Live)',
+    coordinates: { lat: 1.3048, lng: 103.9240 },
+    image: bayImg,
+    breakType: 'Beach Break',
+    activities: ['kitesurfing', 'windsurfing', 'kayak_sup', 'fishing_charter', 'boat_launch'],
+    suitability: {
+      kitesurfing: {
+        score: 92,
+        level: 'Optimal',
+        reason: 'Reliable northeast monsoon sea breezes; dedicated water sports lagoon and wide launching coastline.'
+      },
+      windsurfing: {
+        score: 90,
+        level: 'Optimal',
+        reason: 'Constant cross-shore winds along Area E with specialized rental centers and equipment storage.'
+      },
+      kayak_sup: {
+        score: 86,
+        level: 'Good',
+        reason: 'Sheltered breakwaters provide calm paddle zones outside commercial shipping lanes.'
+      },
+      fishing_charter: {
+        score: 88,
+        level: 'Good',
+        reason: 'Direct access to Southern Strait and Eastern Anchorage pelagic grounds and Bedok Jetty shore casting.'
+      },
+      boat_launch: {
+        score: 85,
+        level: 'Good',
+        reason: 'Dual-lane public trailer launch facility at NSRCC / Marina South passage.'
+      }
+    },
+    conditions: {
+      waveHeightFt: 1.8,
+      wavePeriodSec: 7,
+      swellDirection: 'SE 140°',
+      windSpeedKts: 11,
+      windDirection: 'NE 45°',
+      windType: 'Cross-shore',
+      tideStatus: 'Rising',
+      tideHeightFt: 2.5,
+      nextTide: 'High 2.80m (NEA Live)',
+      waterTempF: 84,
+      waterVisibilityFt: 20,
+      hazards: [
+        { type: 'none', label: 'Monitor NEA UV and Heat Stress indices during afternoon sessions', severity: 'low' }
+      ],
+      hourlyForecast: [
+        { time: '07:00', waveFt: 1.2, windKts: 8, tideFt: 1.8, windDir: 'NE', condition: 'Calm Glass' },
+        { time: '10:00', waveFt: 1.5, windKts: 10, tideFt: 2.2, windDir: 'ENE', condition: 'Fresh Breeze' },
+        { time: '13:00', waveFt: 1.8, windKts: 12, tideFt: 2.5, windDir: 'NE', condition: 'Moderate Sea' },
+        { time: '16:00', waveFt: 1.9, windKts: 13, tideFt: 2.6, windDir: 'NE', condition: 'Brisk Glides' },
+        { time: '19:00', waveFt: 1.4, windKts: 9, tideFt: 2.1, windDir: 'ENE', condition: 'Sunset Cruise' },
+      ]
+    },
+    fishingData: {
+      boatRampAvailable: true,
+      rampType: 'Concrete Dual-Lane Coastal Ramp',
+      lanes: 2,
+      maxVesselLengthFt: 32,
+      marinaName: 'Marina South & East Coast Maritime Hub',
+      slipsCount: 45,
+      fuelDock: true,
+      liveBaitShop: true,
+      fishCleaningTable: true,
+      rampFee: 'S$15 / launch (Public Access)',
+      seasonalTargetSpecies: ['Barramundi (Kerapu)', 'Queenfish', 'Spanish Mackerel (Tenggiri)', 'Trevally', 'Mangrove Jack', 'Snapper'],
+      activeCharters: [
+        {
+          id: 'sg-ch-01',
+          name: 'Singapore Southern Strait Sportfishing',
+          captain: 'Capt. Kenneth Tan',
+          boatName: 'Strait Hunter 32',
+          boatLengthFt: 32,
+          boatType: 'Center Console Twin Yamaha 250s',
+          targetSpecies: ['Barramundi', 'Spanish Mackerel', 'Giant Trevally'],
+          halfDayRate: 650,
+          fullDayRate: 1100,
+          rating: 4.9,
+          reviewCount: 96,
+          phone: '+65 9123 4567',
+          email: 'capt.kenneth@sgstraitcharters.com',
+          dockLocation: 'Marina South Pier / East Coast Berth 4',
+          description: 'Specializes in jigging, popping, and live-prawn drift fishing around Singapore Southern Strait reefs and wrecks.'
+        }
+      ]
+    },
+    amenities: {
+      parkingSpots: 800,
+      parkingFee: 'S$0.60 / 30 mins (HDB/URA Electronic Parking)',
+      lifeguardOnDuty: true,
+      restroomsShowers: true,
+      rentalGearShop: true,
+      dogFriendly: true,
+      accessType: 'Paved Lot to Boardwalk'
+    },
+    description: 'Singapore’s premier coastal recreation belt spanning 15 kilometers with dedicated water sports centers, sailing clubs, and direct boat ramp access.',
+    insiderTip: 'Check the NEA live UV and Heat Stress (WBGT) reading on this page before launching midday paddleboards or kites.'
+  },
+  {
+    id: 'sentosa-siloso-tanjong',
+    name: 'Sentosa Island (Siloso & Tanjong Beach)',
+    region: 'Sentosa Southern Coast',
+    stateCountry: 'Singapore (OneMap & NEA Live)',
+    coordinates: { lat: 1.2504, lng: 103.8275 },
+    image: heroImg,
+    breakType: 'Sheltered Lagoon',
+    activities: ['kayak_sup', 'snorkeling_diving', 'surfing', 'fishing_charter'],
+    suitability: {
+      kayak_sup: {
+        score: 95,
+        level: 'Optimal',
+        reason: 'Protected tropical lagoons surrounded by palm fringed islets; safe for all experience levels.'
+      },
+      snorkeling_diving: {
+        score: 82,
+        level: 'Good',
+        reason: 'Artificial reef modules and rocky breakwater groynes host tropical reef fish and sea anemones.'
+      },
+      surfing: {
+        score: 75,
+        level: 'Fair',
+        reason: 'Wave House flowriding and seasonal gentle ocean swells during high spring tides.'
+      },
+      fishing_charter: {
+        score: 94,
+        level: 'Optimal',
+        reason: 'ONE°15 Marina Sentosa Cove provides world-class yacht and sportfishing charter berths.'
+      }
+    },
+    conditions: {
+      waveHeightFt: 1.5,
+      wavePeriodSec: 6,
+      swellDirection: 'S 175°',
+      windSpeedKts: 9,
+      windDirection: 'NE 40°',
+      windType: 'Offshore',
+      tideStatus: 'Rising',
+      tideHeightFt: 2.4,
+      nextTide: 'High 2.65m (NEA Live)',
+      waterTempF: 85,
+      waterVisibilityFt: 25,
+      hazards: [
+        { type: 'none', label: 'Follow marked swimming lagoon zones away from shipping fairways', severity: 'low' }
+      ],
+      hourlyForecast: [
+        { time: '07:00', waveFt: 1.0, windKts: 7, tideFt: 1.6, windDir: 'NE', condition: 'Mirror Glass' },
+        { time: '10:00', waveFt: 1.3, windKts: 9, tideFt: 2.1, windDir: 'NE', condition: 'Smooth Lagoon' },
+        { time: '13:00', waveFt: 1.6, windKts: 11, tideFt: 2.5, windDir: 'ENE', condition: 'Warm Sun' },
+        { time: '16:00', waveFt: 1.5, windKts: 10, tideFt: 2.4, windDir: 'NE', condition: 'Pleasant Glides' },
+        { time: '19:00', waveFt: 1.1, windKts: 7, tideFt: 1.9, windDir: 'NE', condition: 'Sunset Calm' },
+      ]
+    },
+    fishingData: {
+      boatRampAvailable: true,
+      rampType: 'ONE°15 Marina Sentosa Cove Full Service Travelift & Slips',
+      lanes: 4,
+      maxVesselLengthFt: 80,
+      marinaName: 'ONE°15 Marina Sentosa Cove',
+      slipsCount: 270,
+      fuelDock: true,
+      liveBaitShop: true,
+      fishCleaningTable: true,
+      rampFee: 'ONE°15 Marina Berthing Fees Apply',
+      seasonalTargetSpecies: ['Giant Trevally', 'Cobia', 'Sailfish (Horsburgh Grounds)', 'Red Snapper', 'Coral Trout'],
+      activeCharters: [
+        {
+          id: 'sg-ch-02',
+          name: 'Sentosa Cove Offshore Gamefishing',
+          captain: 'Capt. Daniel Yeo',
+          boatName: 'Equator Blue 46',
+          boatLengthFt: 46,
+          boatType: 'Riviera Flybridge Sportfisher',
+          targetSpecies: ['Giant Trevally', 'Cobia', 'Mahi-Mahi', 'Sailfish'],
+          halfDayRate: 950,
+          fullDayRate: 1650,
+          rating: 5.0,
+          reviewCount: 142,
+          phone: '+65 9876 5432',
+          email: 'daniel@sentosacovecharters.com',
+          dockLocation: 'Superyacht Berth C-08, ONE°15 Marina Sentosa Cove',
+          description: 'Expeditions to Horsburgh Lighthouse, Tioman drop-offs, and Lazarus Island with top-tier Shimano Stella tackle.'
+        }
+      ]
+    },
+    amenities: {
+      parkingSpots: 550,
+      parkingFee: 'S$2.40 / hr (Sentosa Cove & Beach Gantry)',
+      lifeguardOnDuty: true,
+      restroomsShowers: true,
+      rentalGearShop: true,
+      dogFriendly: true,
+      accessType: 'Paved Lot to Boardwalk'
+    },
+    description: 'Singapore’s resort island featuring white sand lagoons, calm turquoise coves, and the premier international marina gateway to the Southern Islands.',
+    insiderTip: 'Launch kayaks from Tanjong Beach early morning for crystal clear waters around the outer coral reef barriers.'
+  },
+  {
+    id: 'changi-beach-park',
+    name: 'Changi Beach & Pulau Ubin Gateway',
+    region: 'Changi Coastal Point',
+    stateCountry: 'Singapore (OneMap & NEA Live)',
+    coordinates: { lat: 1.3914, lng: 103.9926 },
+    image: charterImg,
+    breakType: 'Inlet Channel',
+    activities: ['fishing_charter', 'boat_launch', 'kayak_sup'],
+    suitability: {
+      fishing_charter: {
+        score: 95,
+        level: 'Optimal',
+        reason: 'Fastest water access to eastern fish-rich kelongs, Pulau Ubin channels, and Johor Strait dropoffs.'
+      },
+      boat_launch: {
+        score: 93,
+        level: 'Optimal',
+        reason: 'Changi Point concrete slipway and SAF Yacht Club ramps with fuel and ice facilities.'
+      },
+      kayak_sup: {
+        score: 87,
+        level: 'Good',
+        reason: 'Scenic mangrove and coastal paddle trails connecting Changi Point to Chek Jawa Wetlands.'
+      }
+    },
+    conditions: {
+      waveHeightFt: 1.4,
+      wavePeriodSec: 5,
+      swellDirection: 'NE 50°',
+      windSpeedKts: 10,
+      windDirection: 'NE 45°',
+      windType: 'Onshore',
+      tideStatus: 'Rising',
+      tideHeightFt: 2.6,
+      nextTide: 'High 2.75m (NEA Live)',
+      waterTempF: 84,
+      waterVisibilityFt: 18,
+      hazards: [
+        { type: 'strong_current', label: 'Watch for ferry wake in Serangoon Harbour channel', severity: 'moderate' }
+      ],
+      hourlyForecast: [
+        { time: '07:00', waveFt: 1.0, windKts: 7, tideFt: 1.8, windDir: 'NE', condition: 'Calm Channel' },
+        { time: '10:00', waveFt: 1.2, windKts: 9, tideFt: 2.2, windDir: 'NE', condition: 'Light Wavelets' },
+        { time: '13:00', waveFt: 1.5, windKts: 11, tideFt: 2.6, windDir: 'NE', condition: 'Breezy Tide' },
+        { time: '16:00', waveFt: 1.6, windKts: 11, tideFt: 2.7, windDir: 'ENE', condition: 'Moderate Swell' },
+        { time: '19:00', waveFt: 1.2, windKts: 8, tideFt: 2.0, windDir: 'NE', condition: 'Twilight Calm' },
+      ]
+    },
+    fishingData: {
+      boatRampAvailable: true,
+      rampType: 'Concrete Slipway & Jetty at Changi Point',
+      lanes: 2,
+      maxVesselLengthFt: 35,
+      marinaName: 'Changi Point Coastal Terminal',
+      slipsCount: 30,
+      fuelDock: true,
+      liveBaitShop: true,
+      fishCleaningTable: true,
+      rampFee: 'Free Public Slipway / Wharfage fees apply',
+      seasonalTargetSpecies: ['Barramundi', 'Mangrove Snapper', 'Threadfin (Ngoh Heur)', 'Diamond Trevally', 'Grouper'],
+      activeCharters: [
+        {
+          id: 'sg-ch-03',
+          name: 'Eastern Straits & Kelong Charters',
+          captain: 'Capt. Ah Seng & Crew',
+          boatName: 'Changi Corsair 28',
+          boatLengthFt: 28,
+          boatType: 'Custom Fibreglass Kelong Runner',
+          targetSpecies: ['Barramundi', 'Threadfin', 'Mangrove Snapper'],
+          halfDayRate: 480,
+          fullDayRate: 850,
+          rating: 4.8,
+          reviewCount: 79,
+          phone: '+65 9234 5678',
+          email: 'ahseng@changifishing.sg',
+          dockLocation: 'Changi Point Ferry Terminal Slip 3',
+          description: 'Authentic Singapore kelong and offshore estuary fishing with live Tamban and prawn bait provided.'
+        }
+      ]
+    },
+    amenities: {
+      parkingSpots: 350,
+      parkingFee: 'S$0.60 / 30 mins',
+      lifeguardOnDuty: false,
+      restroomsShowers: true,
+      rentalGearShop: true,
+      dogFriendly: true,
+      accessType: 'Paved Lot to Boardwalk'
+    },
+    description: 'Historic pristine stretch on the northeastern tip of Singapore looking out across the Johor Strait to Pulau Ubin and Tekong.',
+    insiderTip: 'Catch live bait right along the rocky groynes before embarking into the deep channel.'
+  },
+  {
     id: 'haulover-inlet-marina',
     name: 'Haulover Inlet & Marina Beach',
     region: 'North Miami Beach',

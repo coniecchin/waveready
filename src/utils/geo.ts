@@ -2,6 +2,12 @@ import { Coordinates, LocationPreset } from '../types/beach';
 
 export const LOCATION_PRESETS: LocationPreset[] = [
   {
+    id: 'singapore',
+    name: 'Singapore Coastal & Southern Islands',
+    region: 'Singapore (OneMap & NEA Live)',
+    coordinates: { lat: 1.3000, lng: 103.8500 },
+  },
+  {
     id: 'miami',
     name: 'Miami & Biscayne Bay',
     region: 'South Florida',

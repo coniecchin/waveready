@@ -8,6 +8,7 @@ import { Beach, Coordinates, LocationPreset, Activity } from './types/beach';
 import { INITIAL_BEACHES } from './data/mockBeaches';
 import { LOCATION_PRESETS, calculateDistanceMiles } from './utils/geo';
 import { TopBar } from './components/TopBar';
+import { LiveCoastalBanner } from './components/LiveCoastalBanner';
 import { HeroSection } from './components/HeroSection';
 import { FilterBar, SortOption, ViewMode } from './components/FilterBar';
 import { BeachCard } from './components/BeachCard';
@@ -306,6 +307,9 @@ export default function App() {
         compareCount={compareIds.length}
         onOpenCompare={() => setIsCompareOpen(true)}
       />
+
+      {/* Live Coastal Stream (NEA Tides, UV, Heat-Stress, and data.gov.sg Wind) */}
+      <LiveCoastalBanner />
 
       {/* Geolocation feedback notification banner if any */}
       {locationError && (
