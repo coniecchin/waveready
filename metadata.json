@@ -1,0 +1,6 @@
+{
+  "name": "WaveReady",
+  "description": "Find the nearest, best beaches tailored for water sports and fishing charters with real-time swell, wind, tide, and coastal conditions.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
